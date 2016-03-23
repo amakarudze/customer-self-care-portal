@@ -1,0 +1,22 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% from 'macros.html' import render_field %}
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <h2>Account Settings</h2>
+        <form action="{{ url_for('settings') }}" method=post class="form">
+            {{ form.hidden_tag() }}
+
+            {% for field in form %}
+            {{ render_field(field) }}
+            {% endfor %}
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+        {% endblock %}

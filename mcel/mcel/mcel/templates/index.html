@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form method="post" action="/">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+</form>
+<div class="jumbotron">
+    <h1>mcel Customer Self Care Portal</h1>
+    <p class="lead">Welcome to mcel Customer Self Care Portal. This portal enables all our postpaid, prepaid and hybrid(NTDUO) customers to communicate with our company as well as conduct business online.</p>
+    <p><a href="http://www.mcel.co.mz/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Prepaid Packages</h2>
+        <p>
+            mcel's prepaid package gives you the flexibility of controlling your usage.
+            You also get the chance to participate in many of our campaigns for prepaid customers.
+        </p>
+        <p><a class="btn btn-default" href="http://www.mcel.co.mz/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Postpaid Packages</h2>
+        <p>
+            mcel offers a variety of postpaid packages, for individuals, small-to-medium companies as well as large corporates.
+            mcel offers tailor made products for special customers.
+        </p>
+        <p><a class="btn btn-default" href="http://www.mcel.co.mz/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Hybrid (NTDUO)</h2>
+        <p>
+            mcel's NTDUO enables you to enjoy the benefits of both prepaid and postpaid packages.
+            mcel offers a variety of hybrid customers for individuals, small-to-medium companies as well as large corporates.
+        </p>
+        <p><a class="btn btn-default" href="http://www.mcel.co.mz/">Learn more &raquo;</a></p>
+    </div>
+</div>
+{% endblock %}

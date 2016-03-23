@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form method="post" action="/">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+</form>
+
+<h3>{{ message }}</h3>
+
+<p>mcel is the leading mobile network operator in Mozambique, with about 3.5 million active
+subscribers where 98% are prepaid. It commands 75% of market share. Its network is based on the
+GSM standard and is operating on both 2.5/2.75G (almost over the whole country) and 3G layers in
+the 5 main cities namely Maputo, Beira, Tete, Nampula and Nacal. An aggressive coverage expansion
+on both 2G and 3G is ongoing.</p>
+<br />
+<p>As part of mcel's CRM strategy, the company seeks to rewards its loyal customers by upgrading them
+   from prepaid package to either NTDUO or postpaid, depending on the customer's income, usage history and 
+    preferences. This web portal therefore seeks to enhance mcel's relationship with its prepaid customers
+    by offering a platform where they can conduct business with mcel online and simplify the application 
+    process to the convenience of the customer. All mcel customers can register onine, make applications and track 
+    the progress of their application online and only have to visit mcel shops to deliver documents or collect 
+    SIM card and gadgets.</p>
+
+<br />
+
+<h4>Happy shopping! 
+    <br />
+    <br />
+    Estamos juntos!!!</h4>
+
+{% endblock %}

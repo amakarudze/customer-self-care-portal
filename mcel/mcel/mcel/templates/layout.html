@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Mcel Customer Self Care Portal</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand"><img src="../static/img/logosmall.png" width="301" height="114" alt="logo" /> </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}" class="navbar-brand">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}" class="navbar-brand">ABOUT</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="navbar-brand">CONTACT</a></li>
+                    <li><a href="{{ url_for('packages') }}" class="navbar-brand">PACKAGES</a></li>
+                    {% if current_user.is_authenticated() %}
+                    <li><a href="{{ url_for('applyindividual') }}" class="navbar-brand">APPLY</a></li>
+                    <li><a href="{{ url_for('trackapplication') }}" class="navbar-brand">TRACK APPLICATION</a></li>
+                    <li><a href="{{ url_for('profile') }}" class="navbar-brand">PROFILE</a></li>
+                    <li><a href="{{ url_for('signout') }}" class="navbar-brand">SIGN OUT</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('signup') }}" class="navbar-brand">SIGN UP</a></li>
+                    <li><a href="{{ url_for('signin') }}" class="navbar-brand">SIGN IN</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+         </div>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="notification {{ category}}"> {{ message }} </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - Anntele Business Solutions P/L</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

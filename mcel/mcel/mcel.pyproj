@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f3e51d31-4e42-4307-bf59-5e6aa22cb496</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <StaticUriPattern>^/static/.*</StaticUriPattern>
+    <StaticUriRewrite>^/$(MSBuildProjectName)/static/.*</StaticUriRewrite>
+    <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
+    <Name>mcel</Name>
+    <RootNamespace>mcel</RootNamespace>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>3.4</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="mcel\forms.py" />
+    <Compile Include="mcel\models.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="mcel\__init__.py" />
+    <Compile Include="mcel\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mcel\" />
+    <Folder Include="mcel\static\" />
+    <Folder Include="mcel\static\content\" />
+    <Folder Include="mcel\static\css\" />
+    <Folder Include="mcel\static\fonts\" />
+    <Folder Include="mcel\static\img\" />
+    <Folder Include="mcel\static\scripts\" />
+    <Folder Include="mcel\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mcel\static\css\styles.css" />
+    <Content Include="mcel\static\img\logo.PNG" />
+    <Content Include="mcel\static\img\logosmall.PNG" />
+    <Content Include="mcel\static\img\mkesh.PNG" />
+    <Content Include="mcel\static\img\phones.PNG" />
+    <Content Include="mcel\static\img\sample bluegreen.PNG" />
+    <Content Include="mcel\templates\applyindividual.html" />
+    <Content Include="mcel\templates\billinginfo.html" />
+    <Content Include="mcel\templates\cancelapplication.html" />
+    <Content Include="mcel\templates\contactdetails.html" />
+    <Content Include="mcel\templates\createprofile.html" />
+    <Content Include="mcel\templates\csrf_error.html" />
+    <Content Include="mcel\templates\employmentdetails.html" />
+    <Content Include="mcel\templates\macros.html" />
+    <Content Include="mcel\templates\uploaddocs.html" />
+    <Content Include="mcel\templates\packages.html" />
+    <Content Include="mcel\templates\profile.html" />
+    <Content Include="mcel\templates\settings.html" />
+    <Content Include="mcel\templates\signin.html" />
+    <Content Include="mcel\templates\signup.html" />
+    <Content Include="mcel\templates\subscriberdetails.html" />
+    <Content Include="mcel\templates\trackapplication.html" />
+    <Content Include="mcel\templates\updateprofile.html" />
+    <Content Include="mcel\templates\updatecontacts.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="mcel\static\content\bootstrap.css" />
+    <Content Include="mcel\static\content\bootstrap.min.css" />
+    <Content Include="mcel\static\content\site.css" />
+    <Content Include="mcel\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="mcel\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="mcel\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="mcel\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="mcel\static\scripts\bootstrap.js" />
+    <Content Include="mcel\static\scripts\bootstrap.min.js" />
+    <Content Include="mcel\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="mcel\static\scripts\jquery-1.10.2.js" />
+    <Content Include="mcel\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="mcel\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="mcel\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="mcel\static\scripts\jquery.validate.js" />
+    <Content Include="mcel\static\scripts\jquery.validate.min.js" />
+    <Content Include="mcel\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="mcel\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="mcel\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="mcel\static\scripts\respond.js" />
+    <Content Include="mcel\static\scripts\respond.min.js" />
+    <Content Include="mcel\static\scripts\_references.js" />
+    <Content Include="mcel\templates\about.html" />
+    <Content Include="mcel\templates\contact.html" />
+    <Content Include="mcel\templates\index.html" />
+    <Content Include="mcel\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

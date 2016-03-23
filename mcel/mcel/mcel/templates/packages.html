@@ -1,0 +1,69 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% from 'macros.html' import render_field %}
+
+<div class="row">
+    <div class="col-md-9">
+        <h3>{{ message }}</h3>
+        
+        <br />
+        <div class="datagrid">
+            <table border="1">
+                <thread>
+                    <tr>
+                        <th width="200px"><strong>Package</strong></th>
+                        <th width="450px"><strong>Description</strong></th>
+                        <th width="150px"><strong>Type</strong></th>
+                        <th width="150px"><strong>Category</strong></th>
+                        <th width="150px"><strong>Minutes</strong></th>
+                        <th width="250px"><strong>Data (MB)</strong></th>
+                        <th width="150px"><strong>SMS</strong></th>
+                        <th width="450px"><strong>Monthly Fee (MT)</strong></th>
+                        <th width="150px"><strong>Gadget</strong></th>
+                        <th width="300px"><strong>Gadget Type</strong></th>
+                    </tr>
+                </thread>
+                {% for r in packages_available %}
+                    {% if r.monthlyfee <= acceptedfee %}
+                    <tr>
+                        <td width="250px">{{ r.pname }}</td>
+                        <td width="450px">{{ r.pdescription }}</td>
+                        <td width="150px">{{ r.ptype }}</td>
+                        <td width="150px">{{ r.category }}</td>
+                        <td width="150px">{{ r.minutes }}</td>
+                        <td width="200px">{{ r.datamb }}</td>
+                        <td width="200px">{{ r.sms }}</td>
+                        <td width="250px">{{ r.monthlyfee }}</td>
+                        <td width="150px">{{ r.gadget }}</td>
+                        <td width="200px">{{ r.gadgettype }}</td>
+                </tr>
+                    {% endif %}
+                {% endfor %}
+                
+            </table>
+        </div>
+        
+     </div>
+
+
+    <div class="col-md-3">
+        <h3>Discover the best package for you </h3>
+        <form action="{{ url_for('packages') }}" method="post">
+            {{ form.hidden_tag() }}
+
+            {% for field in form %}
+                {{ render_field(field) }}
+            {% endfor %}
+             
+            <input class="btn btn-default" type="submit" name="selfvet" id="selfvet" value="Self-Vet/ Check Suitability" />
+            <br>
+            {% if acceptedmonthlyfee %}
+            <h4>Your recommended package is worth {{ acceptedmonthlyfee }} MT per month.</h4>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

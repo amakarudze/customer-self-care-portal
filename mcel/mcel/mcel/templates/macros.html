@@ -1,0 +1,18 @@
+﻿{% macro render_field(field) %}
+
+<div class="field">
+    {% if field.errors %}
+        {% for error in field.errors %}
+            <div class="notification error">{{ error }}</div>
+        {% endfor %}
+    {% endif %}
+    
+    <table cellpadding="10" cellspacing="10">
+       <tr>
+           <td width="40%"><strong>{{ field.label.text }}</strong></td>
+           <td width="60%">{{ field }}</td>
+       </tr>
+    </table>
+            
+</div>
+{% endmacro %}

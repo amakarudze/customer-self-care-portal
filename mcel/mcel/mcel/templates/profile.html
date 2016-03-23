@@ -1,0 +1,162 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+            <h3>{{ message }}</h3>
+        <p>{{ idCustomer }}</p>
+
+            <div class="datagrid">
+                <table cellspacing="3" cellpadding="3">
+                    {% for r in user_profile %}
+                    <thread>
+                        <tr>
+                            <th width="300px"><strong>First Name</strong></th>
+                            <td width="300px">{{ r.firstname }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Last Name</strong></th>
+                            <td width="300px">{{ r.lastname }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Gender</strong></th>
+                            <td width="300px">{{ r.gender }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Date of Birth</strong></th>
+                            <td width="300px">{{ r.dateofbirth }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Nationality</strong></th>
+                            <td width="300px">{{ r.nationality }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>ID Type</strong></th>
+                            <td width="300px">{{ r.idtype }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>ID Number</strong></th>
+                            <td width="300px">{{ r.idnum }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Phone Number</strong></th>
+                            <td width="300px">{{ r.phonenum }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Mobile Number</strong></th>
+                            <td width="300px">{{ r.mobilenum }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Email Address</strong></th>
+                            <td width="300px">{{ r.emailaddress }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Address Line 1</strong></th>
+                            <td width="300px">{{ r.address1 }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Address Line 2</strong></th>
+                            <td width="300px">{{ r.address2 }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Town/City</strong></th>
+                            <td width="300px">{{ r.towncity }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Country</strong></th>
+                            <td width="300px">{{ r.country }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Preferred Communication Channel</strong></th>
+                            <td width="300px">{{ r.prefchannel }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>Current mcel Customer)</strong></th>
+                            <td width="300px">{{ r.existingcustomer }}</td>
+                        </tr>
+                        <tr>
+                            <th width="300px"><strong>MSISDN</strong></th>
+                            <td width="300px">{{ r.msisdns }}</td>
+                        </tr>
+                    </thread>
+
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    <div class="col-md-6">
+        <h3>Employment Details</h3>
+
+        <div class="datagrid">
+            <table cellspacing="3" cellpadding="3">
+                {% for r in emp_profile %}
+                <thread>
+                    <tr>
+                        <th width="300px"><strong>Employment Type</strong></th>
+                        <td width="300px">{{ r.employment }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Employer</strong></th>
+                        <td width="300px">{{ r.employer }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Position</strong></th>
+                        <td width="300px">{{ r.position }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Company Size</strong></th>
+                        <td width="300px">{{ r.companysize }} employees</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Employment Tenure</strong></th>
+                        <td width="300px">{{ r.employmenttenure }} years</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Monthly Income</strong></th>
+                        <td width="300px">MT {{ r.monthlyincome }}</td>
+                    </tr>
+                </thread>
+
+                {% endfor %}
+
+            </table>
+        </div>
+         <h3>Open Applications</h3>
+
+        <div class="datagrid">
+            <table cellspacing="3" cellpadding="3">
+                {% for r in open_app %}
+                <thread>
+                    <tr>
+                        <th width="300px"><strong>Application Ref Number</strong></th>
+                        <td width="300px">{{ r.idApp }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Package</strong></th>
+                        <td width="300px">{{ r.pname }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Monthly Fee</strong></th>
+                        <td width="300px">MT {{ r.monthlyfee }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Gadget Type</strong></th>
+                        <td width="300px">{{ r.gadgettype }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Application Status</strong></th>
+                        <td width="300px">{{ r.appstatus }}</td>
+                    </tr>
+                    <tr>
+                        <th width="300px"><strong>Date Applied</strong></th>
+                        <td width="300px">{{ r.dateapplied }}</td>
+                    </tr>
+                </thread>
+
+                {% endfor %}
+
+            </table>
+            </div>
+    </div>
+    </div>
+        {% endblock %}

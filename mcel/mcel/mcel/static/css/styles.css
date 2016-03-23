@@ -1,0 +1,242 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/* Sign In form */
+
+form input#email,
+form input#password {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+/* SignUp form */
+ 
+form input#fname,
+form input#lname,
+form input#email,
+form input#confirm,
+form input#password,
+form input#confirmp {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/*Contact form */
+
+form input#name,
+form input#phone, 
+form input#email,
+form input#subject,
+form textarea#messagem {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/* Create Profile form */
+ 
+form input#firstname,
+form input#lastname,
+form input#emailaddress,
+form select#gender,
+form select#idtype,
+form input#idnum,
+form select#nationality,
+form input#dateofbirth,
+form input#phonenum,
+form input#mobilenum,
+form input#address1,
+form input#address2,
+form select#towncity,
+form select#country,
+form select#existingcustomer,
+form input#msisdn,
+form select#prefchannel {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/* Employment Details form */
+   
+form select#employmenttype,
+form input#company ,
+form input#position,
+form select#companysize,
+form select#employmenttenure,
+form input#monthlyincome {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/* Billing Information form */
+
+form select#accounttype,
+form input#accountnum,
+form select#bankname,
+form input#branch,
+form select#currency,
+form input#yearsopen,
+form input#monthsopen,
+form input#bankcertname,
+form input#bankcertpos,
+form select#billingtype,
+form input#billingaccount,
+form input#securitynum {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/* Packages form */
+     
+
+form input#monthlyincome {
+  width: 150px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}
+
+
+/* Application form */
+
+form select#package,
+form select#category,
+form input#numlines,
+form input#numgadgets,
+form select#gadgettype,
+form input#proofid,
+form input#proofres,
+form input#bankstatement,
+form input#ddform,
+form select#billemail,
+form select#receivepromos,
+form select#promoby {
+  width: 300px;
+  color: #00AAAD;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #00AAAD;
+  padding: 10px;
+  font-size: 1.1em;
+}
+ 
+
+/* Message flashing */
+.flash {
+  color: #FF0000;
+  padding: 10px;
+  width: 400px;
+}

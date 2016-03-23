@@ -1,0 +1,25 @@
+﻿{% extends "layout.html" %}
+
+{% from 'macros.html' import render_field %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <h3>Upload Documents</h3>
+
+        <form action="{{ url_for('uploaddocs') }}" method="post">
+            {{ form.hidden_tag() }}
+            {% for field in form %}
+            {{ render_field(field) }}
+            {% endfor %}
+            <input class="btn btn-default" type="submit" name="submitapp" id="submitapp" value="Submit Application" />
+        </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+        {% endblock %}

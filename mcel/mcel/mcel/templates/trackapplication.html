@@ -1,0 +1,42 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="/">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+</form>
+<h3>Open Applications</h3>
+
+<div class="datagrid">
+    <table cellspacing="3" cellpadding="3">
+        {% for r in open_app %}
+        <thread>
+            <tr>
+                <th width="300px"><strong>Application Ref Number</strong></th>
+                <td width="300px">{{ r.idApp }}</td>
+            </tr>
+            <tr>
+                <th width="300px"><strong>Package</strong></th>
+                <td width="300px">{{ r.pname }}</td>
+            </tr>
+            <tr>
+                <th width="300px"><strong>Monthly Fee</strong></th>
+                <td width="300px">MT {{ r.monthlyfee }}</td>
+            </tr>
+            <tr>
+                <th width="300px"><strong>Gadget Type</strong></th>
+                <td width="300px">{{ r.gadgettype }}</td>
+            </tr>
+            <tr>
+                <th width="300px"><strong>Application Status</strong></th>
+                <td width="300px">{{ r.appstatus }}</td>
+            </tr>
+            <tr>
+                <th width="300px"><strong>Date Applied</strong></th>
+                <td width="300px">{{ r.dateapplied }}</td>
+            </tr>
+        </thread>
+
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
